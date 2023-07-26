@@ -24,9 +24,9 @@ parser.add_argument('-m', '--multiplier',
                          'etc. (e.g. -m 2)',
                     type=int, default=1)
 parser.add_argument('-n', '--name', nargs='*',
-                    help='Renaming pattern. Each argument should be ' +
-                         'surrounded in quotes and separated by a space. ' +
-                         r'(e.g. -n "new name s1e0" "%d" "%s")',
+                    help='''Renaming pattern. Each argument should be
+                            surrounded in quotes and separated by a space.
+                            (e.g. -n "new name s1e0" "%%s" "%%s")''',
                     required=True)
 parser.add_argument('--test', action='store_const', const=True, default=None,
                     help="Runs the program in test mode. Does not rename any " +
